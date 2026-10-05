@@ -1,6 +1,6 @@
 # Readout
 
-The Readout research website: https://difanj0713.github.io/spin-universe/
+The Readout research website: https://csslab.github.io/spin-universe/
 
 This repository contains the website for SPIN, SIREN, MINER, and TACIT. It was
 split from Difan's personal website, preserving the project's commit history.
@@ -35,9 +35,12 @@ preserves the `/spin-universe/` paths used on the live site.
 GitHub Pages publishes the root of `main`. Pushing to `main` updates the live
 site; a branch and pull request can be used to review changes first.
 
-The repository name preserves the existing `/spin-universe/` website address,
-including links in papers and social posts. Keep this repository name and the
-existing page paths when editing. The personal website is maintained separately.
+The site is maintained in [CSSLab/spin-universe](https://github.com/CSSLab/spin-universe).
+Keep the existing repository name and page paths when editing.
+
+The former website at `https://difanj0713.github.io/spin-universe/` redirects to
+this site. Those redirects and legacy assets live in Difan's personal website
+repository so previously shared links continue to work.
 
 Before publishing, check the changed pages on desktop and mobile, verify links
 and interactive controls, and run `git diff --check`.
