@@ -58,6 +58,9 @@ def author_names(article):
 
 def import_paper(paper, refresh=False):
     slug, version = paper["slug"], paper["arxiv"]
+    if paper.get("presentation") == "editorial":
+        print(f"{slug}: keeping the edited research article; edit {slug}/index.html directly")
+        return
     source_url = f"https://arxiv.org/html/{version}"
     raw = fetch(source_url, CACHE / f"{version}.html", refresh)
     soup = BeautifulSoup(raw, "html.parser")

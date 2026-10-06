@@ -13,10 +13,17 @@ not changed by commits or deployments in this repository.
 The site uses plain HTML, CSS, and JavaScript. There is no build step.
 
 - `index.html`: Readout homepage
-- `spin/`, `siren/`, `miner/`, `tacit/`: generated full-text paper pages
+- `spin/`: edited research article
+- `siren/`, `miner/`, `tacit/`: generated full-text paper pages
 - `team/`: collaborators
 - `assets/`: styles, scripts, figures, and other shared assets
 - `agent-siren/`: redirect from the former TACIT URL
+
+SPIN is a shorter research article with selected paper figures and results.
+Edit `spin/index.html` directly; its reading layout is in
+`assets/css/research-article.css`. The importer skips entries marked
+`"presentation": "editorial"` in `scripts/papers.json`, so importing other
+papers will not overwrite an edited article.
 
 See [BRANDING.md](BRANDING.md) for the site's voice and visual style. The full-text
 paper pages now use the importer below; the landing-page layouts in
@@ -24,7 +31,7 @@ paper pages now use the importer below; the landing-page layouts in
 
 ## Import full papers
 
-The four paper URLs contain the complete arXiv HTML articles, including figures,
+The remaining three paper URLs contain the complete arXiv HTML articles, including figures,
 MathML equations, footnotes, references and appendices. The importer does not
 summarize or rewrite the papers. It downloads the figures locally and applies
 one shared reading layout inspired by Anthropic's research articles.
