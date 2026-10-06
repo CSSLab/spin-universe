@@ -169,10 +169,11 @@ def import_paper(paper, refresh=False):
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/vendor/ar5iv/ar5iv.min.css">
 <link rel="stylesheet" href="../assets/css/paper.css">
+<link rel="stylesheet" href="../assets/css/readout-nav.css">
 <script defer src="../assets/js/paper.js"></script>
 </head><body>
 <a class="skip-link" href="#paper">Skip to paper</a>
-<nav class="paper-nav" aria-label="Site navigation"><a href="../">Readout</a><a href="https://arxiv.org/abs/{version}">arXiv ↗</a></nav>
+<nav class="readout-nav" aria-label="Site navigation"><a class="readout-home" href="../"><span aria-hidden="true">←</span> Readout</a><a href="https://arxiv.org/abs/{version}">arXiv ↗</a></nav>
 <header class="paper-header">{h1}
 <div class="paper-meta"><p>{html.escape(names)}</p><time datetime="{paper['date']}">{when}</time></div>
 <div class="paper-links"><a href="https://arxiv.org/pdf/{version}">Download PDF</a><a href="{source_url}">Original HTML</a></div>
@@ -184,7 +185,7 @@ def import_paper(paper, refresh=False):
 </div>
 {article}
 </main>
-<footer class="paper-footer"><a href="../">← Readout</a><p>Full paper from <a href="{source_url}">arXiv:{version}</a>. Figures, references and appendices are included.</p></footer>
+<footer class="paper-footer"><a class="readout-home" href="../"><span aria-hidden="true">←</span> Readout</a><p>Full paper from <a href="{source_url}">arXiv:{version}</a>. Figures, references and appendices are included.</p></footer>
 </body></html>
 '''
     output = BeautifulSoup(page, "html.parser")
